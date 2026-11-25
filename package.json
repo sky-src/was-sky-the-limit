@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/sky-src/was-sky-the-limit#readme",
   "dependencies": {
-    "marked": "^18.3.0"
+    "@tailwindcss/cli": "^4.3.5",
+    "marked": "^18.3.0",
+    "tailwindcss": "^4.3.5"
   }
 }

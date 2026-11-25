@@ -22,6 +22,9 @@ const page = (title, body) => `<!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 <title>${title}</title>
 <link rel="stylesheet" href="style.css">
 <main>${body}</main>
