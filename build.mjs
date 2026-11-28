@@ -33,13 +33,20 @@ const page = (title, body) => `<!DOCTYPE html>
 fs.mkdirSync("site", { recursive: true });
 
 for (const post of posts) {
-  const body = `<a href="index.html">back</a><h1>${post.title}</h1><time>${post.date}</time>${post.html}`;
+  // post maker 
+  const body = `<a class="back" href="index.html">sky</a><h1 class="post-title">${post.title}</h1><time class="time">${post.date}</time>${post.html}`;
   fs.writeFileSync(`site/${post.slug}.html`, page(post.title, body));
 }
 
 const list = posts
-  .map((post) => `<li><time>${post.date}</time> <a href="${post.slug}.html">${post.title}</a></li>`)
+  .map((post) => `<li class="list-blogs"><time>${post.date}</time> - <a href="${post.slug}.html">${post.title}</a></li>`)
   .join("");
-fs.writeFileSync("site/index.html", page("What if the sky wasn't the limit?", `<h1>What if the sky wasn't the limit?</h1><ul>${list}</ul>`));
+  // main page maker
+fs.writeFileSync("site/index.html", page("What if the sky wasn't the limit?", `
+  <a class="github" href="https://github.com/sky-src" target="_blank" >@sky-src</a>
+  <a class="email" href="mailto:sky.src.sec@gmail.com" target="_blank" > @sky.src.sec</a>
+  <h1 class="heading-main">What if 
+  <a class="main-head"> the sky </a> wasn't the limit?</h1>
+  <ul>${list}</ul>`));
 
 if (fs.existsSync("style.css")) fs.copyFileSync("style.css", "site/style.css");

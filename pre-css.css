@@ -1,11 +1,11 @@
 @layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import "tailwindcss/preflight.css" layer(base);
+@import url("https://googleapis.com");
 
-
-.lexend-a {
+.lexend {
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -13,10 +13,110 @@
 }
 
 html {
-    font-family: lexend;
+  font-family: "Lexend", sans-serif;
+  background-color: #131313;
 }
 
-a {
-    color: blue;
+body{
+    font-family: "Lexend", sans-serif;
+}
 
+.heading-main {
+    color: rgb(210, 210, 210);
+    left: 0;
+    line-height: 50px;
+    padding: 20px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    width: 100%;
+    font-size: 50px;
+}
+
+.main-head{
+  color:  rgb(70, 163, 255);
+
+}
+
+.list-blogs{
+    padding-top: 20px;
+    color: rgb(143, 143, 143);
+    left: 0;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+  top: 45%;
+    width: 100%;
+    font-size: 25px;
+}
+
+.list-blogs a{
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover{
+    color: rgb(144, 218, 255);
+    text-decoration: underline;
+font-style: italic;
+}
+
+.post-title{
+    color: rgb(255, 255, 255);
+    left: 0;
+    line-height: 30px;
+    margin-top: 0;
+    position: absolute;
+    text-align: center;
+    top: 3%;
+    width: 100%;
+    font-size: 30px;
+}
+
+.time{
+    color: rgb(147, 147, 147);
+    left: 0;
+    line-height: 30px;
+    margin-top: 0;
+    position: absolute;
+    text-align: center;
+    top: 7%;
+    width: 100%;
+    font-size: 25px;
+}
+
+p{
+    color: rgb(204, 204, 204);
+    left: 14%;
+    line-height: 20px;
+    margin-top: 0;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    width: 75%;
+    font-size: 18px;
+}
+
+.back{
+    padding: 10px;
+    font-size: 30px;
+  color:  rgb(70, 163, 255);
+}
+
+.github{
+        color: rgb(204, 204, 204);
+        position: absolute;
+    text-align: left;
+    left: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.email{
+        color: rgb(204, 204, 204);
+    position: absolute;
+    right: 10px;
+        font-size: 20px;
+    top:10px;
 }

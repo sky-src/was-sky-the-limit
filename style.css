@@ -1,4 +1,5 @@
 /*! tailwindcss v4.3.5 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -10,6 +11,29 @@
     --default-mono-font-family: var(--font-mono);
   }
 }
+@layer utilities {
+  .table {
+    display: table;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 @layer base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {
     box-sizing: border-box;
@@ -158,17 +182,123 @@
     display: none !important;
   }
 }
-@layer utilities;
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-.lexend-a {
+@import url("https://googleapis.com");
+.lexend {
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
 html {
-  font-family: lexend;
+  font-family: "Lexend", sans-serif;
+  background-color: #131313;
 }
-a {
-  color: blue;
+body {
+  font-family: "Lexend", sans-serif;
+}
+.heading-main {
+  color: rgb(210, 210, 210);
+  left: 0;
+  line-height: 50px;
+  padding: 20px;
+  margin-top: -100px;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  width: 100%;
+  font-size: 50px;
+}
+.main-head {
+  color: rgb(70, 163, 255);
+}
+.list-blogs {
+  padding-top: 20px;
+  color: rgb(143, 143, 143);
+  left: 0;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  width: 100%;
+  font-size: 25px;
+}
+.list-blogs a {
+  color: white;
+  text-decoration: underline;
+}
+a:hover {
+  color: rgb(144, 218, 255);
+  text-decoration: underline;
+  font-style: italic;
+}
+.post-title {
+  color: rgb(255, 255, 255);
+  left: 0;
+  line-height: 30px;
+  margin-top: 0;
+  position: absolute;
+  text-align: center;
+  top: 3%;
+  width: 100%;
+  font-size: 30px;
+}
+.time {
+  color: rgb(147, 147, 147);
+  left: 0;
+  line-height: 30px;
+  margin-top: 0;
+  position: absolute;
+  text-align: center;
+  top: 7%;
+  width: 100%;
+  font-size: 25px;
+}
+p {
+  color: rgb(204, 204, 204);
+  left: 14%;
+  line-height: 20px;
+  margin-top: 0;
+  position: absolute;
+  text-align: center;
+  top: 15%;
+  width: 75%;
+  font-size: 18px;
+}
+.back {
+  padding: 10px;
+  font-size: 30px;
+  color: rgb(70, 163, 255);
+}
+.github {
+  color: rgb(204, 204, 204);
+  position: absolute;
+  text-align: left;
+  left: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+.email {
+  color: rgb(204, 204, 204);
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  top: 10px;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-outline-style: solid;
+    }
+  }
 }
